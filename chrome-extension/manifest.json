@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "AI Web Automation Agent",
+  "version": "1.0",
+  "description": "Floating automation control panel",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>", "http://127.0.0.1:5000/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "AI Agent"
+  },
+  "web_accessible_resources": [
+    {
+        "resources": ["panel.css"],
+        "matches": ["<all_urls>"]
+    }
+  ]
+}
